@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color:black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.5);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  -switch-bg-url: url(./assets/sun.svg);
+}
+
+body {
+  /*
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  */
+  
+/*posso usar o exemplo a cima ou o exemplo a baixo*/ 
+
+  /*background: color image repeat position/size*/
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: 'inter', sans-serif;
+  color: var(--text-color);
+}
+#container {
+  width: 360px;
+  /*height: 712px; essa parte geralmente nao e usada. Assim o quadrado acompanha o tamanho do texto na pagina*/
+  /*border: 1px solid rgb(136, 24, 24);*/
+  margin: /*auto*/ 56px auto 0px;
+  padding: 24px;
+}
+
+/*profile*/
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+
+}
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/*
+#profile {
+  text-align: center;
+  padding: 24px;*/
+  /*faz o preenchimento de espaco no quadrado*/ 
+
+/*site: css trick, para treinar css*/
+
+/* switch*/
+#switch {
+  /*border: 1px solid red;*/
+  position: relative;
+  width: 65px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  /*right: */
+  /*eles movimentam o botao*/
+  z-index: 1;
+  transform: translateY(-50%); /*esse tras varias transformacos para o switch*/
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+
+/* links*/
+ul {
+list-style: none;/*para tirar os pontinhos de cada linha*/
+display: flex;/* deixa o container/quadrado ao lado*/
+gap: 8px;/*coloca um espaco entre os elementos*/
+/*flex-direction: row; essa e outra opcao de separar os quadrados*/
+padding: 24px 0;
+}
+
+ul li a {
+  border: 1px solid yellow;
+  display: flex;
+  align-items: center;
+justify-content: center; /* faz o texto ficar no meio*/
+padding: 16px 24px; /*espaco entre a parte o container e a escrita/texto*/
+
+  /*height: 52px;*/
+    /* outra forma de espaco entre a parte o container e a escrita/texto*/
+
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+    /* deixa os conteiner brancos */
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: /*normal*/500;
+
+    transition: background 0.2s;
+}
+
+/* o jeito certo e o jeito que resolve*/
+/* o jeito errado e o que nao resolve*/
+
+/* pseudo-selector */
+ul li a:hover {
+background: var(--surface-color-hover);
+border: 1.5px solid var(--text-color); /*a cor da borda do conteiner*/
+}
+
+/*social links*/
+#social-links {
+ display: flex;
+ justify-content: center;
+ /*gap: 32px;*/
+
+padding: 24px 0;
+
+font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  
+  transition: background 0.2;
+  border-radius: 50%;
+    
+  /*centralizando as bolinhas quando passo o mouse*/
+}
+
+#social-links a:hover {
+  background: var(--highlight-color)
+  
+  /*padding: 16px;*/
+
+  /*essa coluna faz os incones se mexerem quando passo o mouse*/
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+

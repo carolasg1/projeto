@@ -1,0 +1,12 @@
+errada**** uma linguagem de progracao/Uma linguagem de banco de dados
+errada**** É uma linguagem de programação para criar sites
+certa***** <a href=\"https://rocketseat.com.br\">link text</a>
+certa***** Adiciona um parágrafo de texto
+errada**** Uma linguagem de programação
+errada**** body: red/body = red
+***A ordem em que os estilos CSS são aplicados a um elemento, com base em sua ordem no código e especificidade
+***Uma maneira de representar visualmente um elemento HTML como uma caixa retangular com conteúdo, preenchimento, bordas e margens
+***Laranja (orange)
+***Definir as configurações globais do editor, como fonte e tema
+***<html>
+***<link rel=\"stylesheet\" href=\"styles.css\" />

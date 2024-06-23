@@ -1,0 +1,13 @@
+html
+sempre que quiser colocar um comentario no meio da edicao so colocar
+/* para abrir
+*/ para fechar
+para abri a pagina no navegador e edicao precisa acessar o visual studio code, e ir no index.html, com o segundo botao open with live server
+
+ul= uma lista nao numerica
+ol= lista numerica
+
+o jeito certo e o jeito que resolve, depois vem aperfeicoando a tecnica
+
+
+
